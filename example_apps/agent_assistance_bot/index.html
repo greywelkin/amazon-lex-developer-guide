@@ -99,14 +99,14 @@
 
 		// Initialize the Amazon Cognito credentials provider
 		// Provide the region of your AWS account below
-		AWS.config.region = 'Enter region here'; // Region
+		AWS.config.region = 'us-east-1'; // Region
 		AWS.config.credentials = new AWS.CognitoIdentityCredentials({
 		// Provide your Pool Id below
-			IdentityPoolId: 'Enter pool Id here',
+			IdentityPoolId: 'us-east-1:90d3d0a0-6ebd-4546-b0ac-46884da0e23a',
 		});
 
 		var lexruntime = new AWS.LexRuntime();
-		var lexUserId = 'chatbot-demo' + Date.now();
+		var lexUserId = 'AgentAssistBot' + Date.now();
 		var sessionAttributes = {};
 
 		function pushChat() {
